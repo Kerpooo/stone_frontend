@@ -100,7 +100,7 @@ export const useProducto = (id?: string) => {
         };
 
         fetchProducts();
-    }, []);
+    }, [id]);
 
     return { producto, loading, error };
 };

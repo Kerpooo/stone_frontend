@@ -8,7 +8,8 @@ export interface Inventario {
     id_producto: string;
     cantidad_disponible: number;
     id_bodega: number;
-
+    nombre_producto: string;
+    nombre_bodega: string;
 }
 
 export const useInventarioList = () => {
@@ -65,7 +66,7 @@ export function useInventario(id?: string) {
         async function fetchBodega() {
             const token = Cookies.get('authToken');
 
-    
+
 
             if (!token) {
                 setError('No se encontró el token de autenticación.');

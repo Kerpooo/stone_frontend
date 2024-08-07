@@ -1,8 +1,6 @@
 "use client"
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { Badge } from "../ui/badge";
-import { useProductos } from "@/hooks/useProductos";
 import { PencilIcon } from "lucide-react";
 import Link from "next/link";
 import { useInventarioList } from "@/hooks/useInventario";
@@ -27,9 +25,9 @@ export default function TablaInventario() {
                 <TableBody>
                     {inventario.map((inventario) => (
                         <TableRow key={inventario.id_inventario}>
-                            <TableCell className="font-medium">{inventario.id_producto}</TableCell>
+                            <TableCell className="font-medium">{inventario.nombre_producto}</TableCell>
                             <TableCell>{inventario.cantidad_disponible}</TableCell>
-                            <TableCell>{inventario.id_bodega}</TableCell>
+                            <TableCell>{inventario.nombre_bodega}</TableCell>
                             <TableCell className="flex gap-4">
                                 <Link href={`/inventario/${inventario.id_inventario}`}>
                                     <Button size="icon">

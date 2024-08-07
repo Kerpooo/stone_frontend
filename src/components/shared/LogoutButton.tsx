@@ -11,7 +11,7 @@ export const Logout = () => {
 
     useEffect(() => {
         const tokenExiste = Cookies.get('authToken');
-        setToken(tokenExiste);
+        setToken(tokenExiste ?? null);
     }, []);
 
     async function handleLogout() {

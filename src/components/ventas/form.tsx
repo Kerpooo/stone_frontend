@@ -9,6 +9,7 @@ import { useForm, useFieldArray, Controller } from "react-hook-form";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { PlusIcon, Trash2Icon } from "lucide-react";
 import { useProductos } from "@/hooks/useProductos";
+import Cookies from 'js-cookie';
 
 interface FormValues {
     venta: {
